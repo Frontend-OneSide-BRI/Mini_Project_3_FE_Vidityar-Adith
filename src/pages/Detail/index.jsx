@@ -15,7 +15,7 @@ function DetailPage() {
       console.log(response);
       setDetailMovie(response);
     } catch {
-      console.log("error");
+      //console.log("error");
     }
   };
 
