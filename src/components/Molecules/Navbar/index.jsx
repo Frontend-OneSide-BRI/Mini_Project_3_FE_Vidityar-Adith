@@ -25,7 +25,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="header fixed top-0 left-0 w-full z-[100] transition duration-500 ease-in-out bg-primaryBlue">
+      <nav className="header fixed top-0 left-0 w-full z-[100] transition duration-500 ease-in-out bg-primaryLightBlue">
         <div className="header__wrap flex items-center justify-between px-8">
           <div className="logo flex items-center">
             <Link to="/">
