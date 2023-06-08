@@ -1,6 +1,6 @@
 import React from "react";
 
-function Button() {
+function Button({ textContent }) {
   return (
     <>
       <button
@@ -9,7 +9,7 @@ function Button() {
         bg-primaryDarkBlue hover:bg-primaryLightBlue
         dark:bg-primaryDarkBlue dark:hover:bg-primaryBlue"
       >
-        Atom Button
+        {textContent}
       </button>
     </>
   );
