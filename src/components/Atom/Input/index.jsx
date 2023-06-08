@@ -8,7 +8,7 @@ function Input() {
           type="email"
           id="helper-text"
           aria-describedby="helper-text-explanation"
-          class="block px-2.5 pb-2.5 pt-4 border-1 text-sm rounded-lg appearance-none focus:outline-none focus:ring-0 peer
+          className="block px-2.5 pb-2.5 pt-4 border-1 text-sm rounded-lg appearance-none focus:outline-none focus:ring-0 peer
         bg-transparent border-primaryLightGray text-primaryLightBlue focus:ring-primaryBlue focus:border-LightBlue   
         dark:border-primayLightGray dark:placeholder-primaryLightBlue dark:text-white dark:focus:ring-primaryLightGray dark:focus:border-primaryLightGray"
           placeholder="name@gmail.com"
