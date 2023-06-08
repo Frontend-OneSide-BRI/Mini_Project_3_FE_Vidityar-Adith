@@ -1,9 +1,12 @@
 import React from "react";
+import Form from "../../components/Molecules/Form";
 
 function loginPage() {
   return (
     <>
-      <div>Halaman Login</div>
+      <section className="bg-gray-900">
+        <Form />
+      </section>
     </>
   );
 }
