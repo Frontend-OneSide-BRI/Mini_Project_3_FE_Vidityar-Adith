@@ -17,9 +17,9 @@ function DetailItem({ detailMovie }) {
         </figcaption>
       </figure>
       <div className="flex ">
-        <div className="w-1/5 m-4">
+        <div className="m-4 w-[500px]">
           <img
-            className=" h-[300px] object-cover"
+            className="object-cover"
             src={apiConfig.originalImage(detailMovie.poster_path)}
             alt=""
           />
@@ -28,13 +28,13 @@ function DetailItem({ detailMovie }) {
           <h5 className="mb-2 font-normal text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Release Date : {detailMovie.release_date}
           </h5>
-          <div className="genres">
+          <div className="genres flex">
             {detailMovie.genres &&
-              detailMovie.genres
-                .slice(0, 5)
-                .map((genre, i) => (
-                  <ButtonOutline key={i}>{genre.name}</ButtonOutline>
-                ))}
+              detailMovie.genres.slice(0, 5).map((genre, i) => (
+                <div key={i}>
+                  <ButtonOutline>{genre.name}</ButtonOutline>
+                </div>
+              ))}
           </div>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {detailMovie.overview}
@@ -45,7 +45,7 @@ function DetailItem({ detailMovie }) {
         <div className="section__header">
           <h2>Casts</h2>
         </div>
-        <CastDetail id={detailMovie.id} />
+        <CastDetail />
       </div>
     </>
   );
