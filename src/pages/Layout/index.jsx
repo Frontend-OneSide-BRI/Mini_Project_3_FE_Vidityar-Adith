@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Molecules/Navbar";
+import Footer from "../../components/Molecules/Footer";
 
 function Layout({ children, access }) {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ function Layout({ children, access }) {
       <div className="pt-[100px]">
         <div>{children}</div>
       </div>
+      <Footer />
     </div>
   );
 }
