@@ -1,4 +1,4 @@
-import { HomePage, LoginPage, MoviePage, TVPage } from "../pages";
+import { DetailPage, HomePage, LoginPage, MoviePage, TVPage } from "../pages";
 
 const routers = [
   {
@@ -17,6 +17,12 @@ const routers = [
     path: "/movie",
     element: <MoviePage />,
     layout: true,
+    access: "member",
+  },
+  {
+    path: "/movie/:id",
+    element: <DetailPage />,
+    layout: false,
     access: "member",
   },
   {

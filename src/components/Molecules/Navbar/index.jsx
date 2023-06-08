@@ -13,10 +13,10 @@ const headerNav = [
     display: "Movies",
     path: "/movie",
   },
-  {
-    display: "TV Series",
-    path: "/tv",
-  },
+  // {
+  //   display: "TV Series",
+  //   path: "/tv",
+  // },
 ];
 function Navbar() {
   const { pathname } = useLocation();
