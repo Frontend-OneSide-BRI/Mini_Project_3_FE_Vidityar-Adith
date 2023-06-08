@@ -1,8 +1,15 @@
 import axios from "axios";
 import { BASE_URL } from "../config";
+import queryString from "query-string";
+import apiConfig from "./apiConfig";
 
 const http = axios.create({
   baseURL: `${BASE_URL}`,
+  headers: {
+    "Content-Type": "application/json",
+  },
+  paramsSerializer: (params) =>
+    queryString.stringify({ ...params, api_key: apiConfig.apiKey }),
 });
 
 http.interceptors.request.use(
@@ -19,14 +26,13 @@ http.interceptors.request.use(
 // Add a response interceptor
 http.interceptors.response.use(
   function (response) {
-    // Any status code that lie within the range of 2xx cause this function to trigger
-    // Do something with response data
+    if (response && response.data) {
+      return response.data;
+    }
     return response;
   },
   function (error) {
-    // Any status codes that falls outside the range of 2xx cause this function to trigger
-    // Do something with response error
-    return Promise.reject(error);
+    throw error;
   }
 );
 
